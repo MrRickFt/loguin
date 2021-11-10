@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="script.js"></script>
+    
+</head>
+
+<body>
+   
+    <div id="header">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          
+        
+        
+      <ul class="nav nav-pills bg-opacity" >
+        <img src="images/logotipe.png"  id="logotipe"></img>
+        <li class="nav-item"><a href="" class="nav-link " aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="" class="nav-link">About Us</a></li>        
+      </ul>
+    </header>
+    </div>
+
+    
+
+    <div class="container">
+    <main class="form-signin">
+
+      <!--Inreso formulario-->
+      <div id="ingreso_div">
+      <img class="mb-4" src="images/perfil.png" alt="">
+        <form id="ingreso_from">
+        
+          <h1>Iniciar Sesión</h1>
+        
+          <div class="form-floating">
+            <input type="email" class="form-control" id="ing_email" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="ing_pass" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+             <div>
+               <label id="msj">asd</label>
+             </div>   
+          <button id="btn_ingresar" class="w-100 btn btn-lg btn-primary" type="button">Ingresar</button>
+          <div>
+            <label class="btn_alternativo">
+              <button type="button" id="btn_registrarme" class="btn btn-link">Registrarme</button>
+            </label>
+          </div>
+        </form>
+      </div>
+
+      
+      <!--Registro formulario-->
+        <div id="register">
+          <img class="mb-4" src="images/registro.png" alt="">
+        <div id="registro">
+          <form id="registro_from">
+          <h1>Registrar Usuario</h1>
+          <div class="form-floating">
+            <input type="email" class="form-control" id="user_registre" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="text" class="form-control" id="name" placeholder="Nombre">
+            <label for="floatingPassword">Nombres</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="password" class="form-control" id="pass_registre" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div>
+            <label id="msj2">asd</label>
+          </div>   
+         <button id="btn_registrar" class="w-100 btn btn-lg btn-primary" type="button">Registrarme</button>
+         <div class="btn_alternativo">
+          <label>
+            <button type="button" id="btn_sig_in" class="btn btn-link">Sign In</button>
+          </label>
+        </div>
+        </div>
+        </div>
+      </form>
+      </main>
+    </div>
+
+</body>
+</html>
