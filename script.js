@@ -27,12 +27,17 @@ $(document).ready(function(){
                
             var user = $('#ing_email').val();
             var pass = $('#ing_pass').val();
-              
-            var  validar_email =( datos.includes( user ) );
-            
-            console.log(validar_email);
 
-            if(validar_email == true){
+             
+            
+            var  validar_email =( datos.includes( user ) );
+            console.log(validar_email);
+            
+            if(user.length == 0 || pass.length == 0){
+                
+                $('#msj').show();
+                $('#msj').text('Por favor rellene los campos').css("color", "red");
+            }else if(validar_email == true){
                 var position_email = datos.indexOf(user);
                 var contrasenia = datos[position_email+1];
                 var tipo = typeof(contrasenia);
@@ -72,28 +77,33 @@ $(document).ready(function(){
         var rg_name = $('#name').val();
         var rg_pass = $('#pass_registre').val();
 
-            if(rg_user.length ==0 || rg_name.length == 0 || rg_pass.length ==0){
+       
+        if(rg_user.length == 0 || rg_name.length == 0 || rg_pass.length == 0){
+                $('msj2').show();
                 $('#msj2').text('Por favor llene todos los campos').css("color", "red"); 
+              
+            } else{
+                var  rg_validar_email =( datos.includes( rg_user ) );
+            
+                console.log(rg_validar_email);
+                if(rg_validar_email == true){
+                    $('#msj2').text('Este e-mail ya está en uso. Por favor inicie sesión').css("color", "red"); 
+                    $('#user_registre').css("border", "1px solid red")
+                    $('#name').val('');
+                    $('#pass_registre').val('');
+                    
+                } else {
+                    datos.push(rg_user, rg_pass, rg_name);
+                    $('#msj2').text('Usuario creado correctamente').css("color", "green");
+                    $('#name').val('');
+                    $('#user_registre').val('');
+                    $('#pass_registre').val('');
+                    console.log(datos);
+                            
+                }
             }
             
-            var  rg_validar_email =( datos.includes( rg_user ) );
-            
-            console.log(rg_validar_email);
-            if(rg_validar_email == true){
-                $('#msj2').text('Este e-mail ya está en uso. Por favor inicie sesión').css("color", "red"); 
-                $('#user_registre').css("border", "1px solid red")
-                $('#name').val('');
-                $('#pass_registre').val('');
-                
-            } else {
-                datos.push(rg_user, rg_pass, rg_name);
-                $('#msj2').text('Usuario creado correctamente').css("color", "green");
-                $('#name').val('');
-                $('#user_registre').val('');
-                $('#pass_registre').val('');
-                console.log(datos);
-                        
-            }
+           
         
     })
        
